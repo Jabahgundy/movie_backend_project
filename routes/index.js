@@ -4,7 +4,7 @@ const router = express.Router();
 const MovieReviewModel = require('../models/MovieReviewModel');
 
 router.get('/', async (req, res, next) => {
-    const MovieData = await MovieReviewModel.getAllMovieDate();
+    const MovieData = await MovieReviewModel.getAll();
     console.log("REQUEST SESSION: ", req.session);
 
 
