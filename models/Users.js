@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 
 class User {
     constructor(id, first_name, last_name, email, password) {
-        this.id = idl;
+        this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
@@ -12,7 +12,7 @@ class User {
     }
 
     checkPassword(hashedPassword) {
-        return becrypt.compareSync(this.password, hashPassword)
+        return bcrypt.compareSync(this.password, hashedPassword)
     }
 
     static async addUser(first_name, last_name, email, password) {
@@ -34,10 +34,10 @@ class User {
             const isValid = this.checkPassword(response.password);
 
             if (!!isValid) {
-                const {id, first_name, last_name } = respoinse;
-                return {isValid, user_id: id, first_name, last_name }
+                const { id, first_name, last_name } = response;
+                return { isValid, user_id: id, first_name, last_name }
             } else {
-                return { isValid}
+                return { isValid }
             }
         } catch (error) {
             console.error("ERROR:", error);

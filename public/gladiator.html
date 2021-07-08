@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles_folder/gladiator.css">
+    <title>Gladiator | Landing Page</title>
+</head>
+
+<body>
+    <div class="logo">
+        Movie Review
+    </div>
+    <img class="poster" id="poster" src="./images/G1.jpg">
+    <div class="overlay"></div>
+    <div class="info">
+        <h1 class="title" id="title">Gladiator</h1>
+        <p id="data">2hr 13min | 2000 | Action Drama | MA</p>
+        <p>Crowe portrays Roman general Maximus Decimus Meridius, who is betrayed when Commodus, the ambitious son of
+            Emperor Marcus Aurelius, murders his father and seizes the throne.
+        </p>
+        <div class="trailer">
+            <i class="fas fa-play"></i> Watch Trailer
+        </div>
+        <div class="Review">
+            <a href="#">
+                <button class="toggle">Submit a Review</button>
+            </a>
+            <script>
+                function toggle(num) {
+                    document.getElementById("fade").style.opacity = 1;
+                    setTimeout(switch_movie, 1000, num);
+                    setTimeout(fade, 1500);
+                }
+                function switch_movie(val) {
+                    if (val == 0) {
+                        document.getElementById("poster").src = "G1.jpg";
+                        document.getElementById("title").innerHTML = "Gladiator";
+                        document.getElementById("data").innerHTML = "2hr 13min | 2000 | Action Drama | MA";
+                    }
+                }
+            </script>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
