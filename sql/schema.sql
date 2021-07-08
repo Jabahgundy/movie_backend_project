@@ -1,12 +1,11 @@
-CREATE TABLE rankings (
-    id serial PRIMARY KEY,
-    movie_rankings text NOT NULL
-); 
 
 CREATE TABLE movies (
     id serial PRIMARY KEY,
-    movie_title text NOT NULL,
-    movie_id integer REFERENCES rankings(id) 
+    name varchar(200),
+    director varchar(200),
+    release_date varchar(200), 
+    movie_length varchar(200),
+    picture varchar(500)
 );
 
 CREATE TABLE users (
@@ -15,4 +14,12 @@ CREATE TABLE users (
     last_name text,
     email varchar(200),
     password varchar(2000)
+);
+
+CREATE TABLE reviews (
+    id serial PRIMARY KEY,
+    rating integer, 
+    content text, 
+    movie_id integer REFERENCES movies (id),
+    user_id integer REFERENCES users (id) 
 );
