@@ -20,7 +20,7 @@ app.use(logger);
 // end
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('Public'));
+app.use(express.static('public'));
 // to create form data //
 
 const es6Renderer = require('express-es6-template-engine');
