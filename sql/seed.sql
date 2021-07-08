@@ -13,6 +13,6 @@ INSERT INTO movies
     (movie_title, movie_id)
 VALUES
     ('Tron Legacy', 6),
-    ('Gladator', 6), 
-    ('Black Widow', 6),
+    ('Gladiator', 6), 
+    ('Black Widow', 6);
    

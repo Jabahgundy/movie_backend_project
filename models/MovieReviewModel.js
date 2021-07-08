@@ -1,8 +1,8 @@
 const db = require('./conn.js');
 
 
-class MovieReivewModel {
+class MovieReviewModel {
 
 };
 
-module.exports = MovieReivewModel
+module.exports = MovieReviewModel
