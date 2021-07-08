@@ -1,12 +1,12 @@
 const express = require('express'),
     router = express.Router(),
-    ParksModel = require('../models/MovieReviewModel'),
+    MoviesModel = require('../models/MovieReviewModel'),
     ReviewsModel = require('../models/Reviews');
 
-route.get('/movie_id', async (req, res) => {
+router.get('/:movie_id', async (req, res) => {
     const movieId = req.params.movie_id,
-       Movie = new MoviesModel(movieId),
-       movieData = await Movie.getMovieData();
+       movie = new MoviesModel(movieId),
+       movieData = await movie.getmovieData();
     const Reviews = new ReviewsModel(null, movieId),
        reviewData = await Reviews.getMovieReviews();
 

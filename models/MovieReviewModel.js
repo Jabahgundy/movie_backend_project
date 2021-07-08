@@ -20,9 +20,9 @@ class MovieReviewModel {
         }
     }
 
-    async getMovieData() {
+    async getmovieData() {
         try {
-            const query = `SELECT * FROM movie WHERE id = ${this.id}`;
+            const query = `SELECT * FROM movies WHERE id = ${this.id}`;
             const response = await db.one(query);
             return response;
         } catch (error) {

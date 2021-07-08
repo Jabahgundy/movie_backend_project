@@ -44,10 +44,10 @@ server.listen(port, hostname, () => {
 
 const rootController = require('./routes/index');
 const movieControler = require('./routes/movie'); 
-const reviewController = require('./routes/reviews');
+const reviewsController = require('./routes/reviews');
 const userController = require('./routes/users')
 
 app.use('/', rootController);
-app.use('/MovieReviewModel', movieControler); 
+app.use('/movie', movieControler); 
 app.use('/reviews', reviewsController); 
 app.use('/users', userController)
