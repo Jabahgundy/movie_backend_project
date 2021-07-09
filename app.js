@@ -30,7 +30,7 @@ app.set('views', './views');
 app.set('view engine', 'html');
 
 app.use(session({
-    secret: 'get rad!',
+    secret: 'Enjoy the Movie',
     resave: false,
     saveUninitialized: false,
     is_logged_in: false,

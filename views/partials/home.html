@@ -1,19 +1,14 @@
 <section class="section">
     <ul class="level">
         ${data.map(movie => `
-            <li style="width: 100%">
-                <a href="/movie/${movie.id}" class="is-pulled-left">
-                    <figure class="image is-128x128 is-pulled-left" style="margin-right: 16px;">
-                        <img src="${movie.picture}"/>
-                    </figure>
-                    ${movie.name}
-                </a>
-            </li>
-        `)}
+        <li>
+            <a href="/movie/${movie.id}" class="is-pulled-left">
+                <figure class="image is-128x128 is-pulled-left" style="margin-right: 16px;">
+                    <img src="${movie.picture}" />
+                </figure>
+                ${movie.name}
+            </a>
+        </li>
+        `).join('')}
     </ul>
 </section>
-
-
-
-
-

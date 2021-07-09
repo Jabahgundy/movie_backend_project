@@ -32,4 +32,4 @@ class Reviews {
 
 }
 
-module.exports = Reviews; 
+module.exports = Reviews;
