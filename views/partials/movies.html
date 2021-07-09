@@ -1,6 +1,12 @@
 <section class="section">
     <div class="clearfix">
-        <p>${movieData.Movie_Id}</p>
+        <center>
+            <h1 class="title"> ${movieData.name}</h1>
+        </center>
+        <p class="information">
+            Directed by: ${movieData.director} <br> Movie length: ${movieData.movie_length}
+        </p>
+
         <figure class="image">
             <img src="${movieData.picture}" />
         </figure>
