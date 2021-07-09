@@ -1,10 +1,10 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 body {
-    background-image: url(../images/MoviePosters.jpg);
+    background-image: url(../images/RED.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -24,4 +24,11 @@ main {
 main h1 {
     font-size: 100px;
     text-align: center;
+}
+
+h1.container {
+    text-align: center;
+    color: #ffff;
+    
+
 }
