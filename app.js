@@ -20,7 +20,7 @@ app.use(logger);
 // end
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('Public'));
+app.use(express.static('public'));
 // to create form data //
 
 const es6Renderer = require('express-es6-template-engine');
@@ -43,7 +43,11 @@ server.listen(port, hostname, () => {
 });
 
 const rootController = require('./routes/index');
-const userController = require('./routes')
+const movieControler = require('./routes/movie'); 
+const reviewController = require('./routes/reviews');
+const userController = require('./routes/users')
 
 app.use('/', rootController);
-app.use('/user', userController)
+app.use('/MovieReviewModel', movieControler); 
+app.use('/reviews', reviewsController); 
+app.use('/users', userController)
