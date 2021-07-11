@@ -6,7 +6,7 @@ router.post('/add', async (req, res) => {
     const {movie_id, review_content, rating} = req.body;
     const Review = new ReviewsModel(null, movie_id, review_content, rating);
     const response = await Review.addReview();
-    if (reponse.rowCoutn >= 1) {
+    if (response.rowCoutn >= 1) {
         res.redirect('back');
     } else {
         res.sendStatus(500);

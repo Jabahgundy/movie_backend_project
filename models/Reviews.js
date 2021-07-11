@@ -25,6 +25,7 @@ class Reviews {
             console.log("response", response);
             return response;
         } catch (err) {
+            console.log(err);
             return err.message;
         }
     }
