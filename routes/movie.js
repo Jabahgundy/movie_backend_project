@@ -5,17 +5,18 @@ const express = require('express'),
 
 router.get('/:movie_id', async (req, res) => {
     const movieId = req.params.movie_id,
-       movie = new MoviesModel(movieId),
-       movieData = await movie.getmovieData();
+        movie = new MoviesModel(movieId),
+        movieData = await movie.getmovieData();
     const Reviews = new ReviewsModel(null, movieId),
-       reviewData = await Reviews.getMovieReviews();
+        reviewData = await Reviews.getMovieReviews(movieId);
+    console.log(reviewData);
 
 
 
     res.render('template', {
         locals: {
             title: movieData.name,
-            movieData, 
+            movieData,
             reviewData,
             is_logged_in: req.session.is_logged_in,
         },
@@ -23,7 +24,7 @@ router.get('/:movie_id', async (req, res) => {
             body: 'partials/movies',
         },
     });
-   
+
 });
 
-module.exports = router; 
+module.exports = router;

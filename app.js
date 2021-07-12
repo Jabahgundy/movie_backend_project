@@ -3,7 +3,7 @@
 const http = require('http')
 
 const hostname = 'localhost';
-const port = 3534;
+const port = 3005;
 
 const express = require('express');
 const session = require('express-session');
@@ -43,11 +43,11 @@ server.listen(port, hostname, () => {
 });
 
 const rootController = require('./routes/index');
-const movieControler = require('./routes/movie'); 
+const movieController = require('./routes/movie');
 const reviewsController = require('./routes/reviews');
 const userController = require('./routes/users')
 
 app.use('/', rootController);
-app.use('/movie', movieControler); 
-app.use('/reviews', reviewsController); 
+app.use('/movie', movieController);
+app.use('/reviews', reviewsController);
 app.use('/users', userController)
