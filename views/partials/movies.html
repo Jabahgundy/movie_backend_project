@@ -1,24 +1,39 @@
-<section class="section">
-    <div class="clearfix">
+<section class="moviePage">
+    <div class="movieTitle2">
         <center>
-            <h1 class="title"> ${movieData.name}</h1>
+            <h1 class="title2"> ${movieData.name}</h1>
         </center>
         <p class="information">
             Directed by: ${movieData.director} <br> Movie length: ${movieData.movie_length}
         </p>
+    </div>
 
-        <figure class="image">
+    <div>
+        <figure class="movieImg">
             <img src="${movieData.picture}" />
         </figure>
     </div>
-    <div class="clearfix">
-        <ul style="margin-top: 16px;">
+
+    <div class="movieRatings">
+        <ul class="reviewList" style="margin-top: 16px;">
             ${reviewData.map(review => `
-            <li>
-                <span class="rating" style="display: inline-block; width: 100%;">${review.rating}Stars</span>
-                <p>${review.content}</p>
-            </li>
+
+            <div class="ratingName">
+                <li>${review.first_name} ${review.last_name}</li>
+            </div>
+
+            <div class="ratingContent">
+                <li>${review.content}</li>
+                <li><span class="rating" style="display: inline-block; width: 100%;">${review.rating}Stars</span></li>
+            </div>
+
+
             `).join('')}
         </ul>
     </div>
+
 </section>
+
+<div class="movieButton">
+    <a href="/users/reviewsC" class="btn-area">Submit Your Review</a>
+</div>

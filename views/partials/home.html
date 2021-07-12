@@ -1,12 +1,18 @@
+<div class="mainTitle">
+    <center>
+        <h1>Enjoy The Show!</h1>
+    </center>
+</div>
+
 <section class="section">
     <ul class="level">
         ${data.map(movie => `
         <li>
-            <a href="/movie/${movie.id}" class="is-pulled-left">
-                <figure class="image is-128x128 is-pulled-left" style="margin-right: 16px;">
+            <a href="/movie/${movie.id}">
+                <figure class="homeImg">
                     <img src="${movie.picture}" />
                 </figure>
-                ${movie.name}
+                <p class="movieTitle">${movie.name}</p>
             </a>
         </li>
         `).join('')}

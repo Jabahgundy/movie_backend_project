@@ -8,9 +8,16 @@ class Reviews {
         this.rating = rating;
     }
 
-    async getMovieReviews() {
+    async getMovieReviews(movieId) {
         try {
-            const query = `SELECT * FROM reviews WHERE movie_id = ${this.movie_id}`;
+            const query = `SELECT * 
+            FROM reviews 
+            INNER JOIN movies 
+            ON movies.id = '${movieId}' 
+            AND movies.id = reviews.movie_id
+            INNER JOIN users
+            ON users.id = reviews.user_id;`
+
             const response = await db.any(query);
             return response;
         } catch (err) {
