@@ -100,12 +100,12 @@ p.information{
     position: relative;
     left: 0%;
 }
-.movieButton{
+/* .movieButton{
     position: absolute;
     top: 50px;
     right: -40px;
 
-}
+} */
 
 /* Movie Page End */
 
@@ -113,8 +113,8 @@ p.information{
 /* Review Page Comment Box */
 
 .reviewPage{
-    top: 50px;
-    left: 50px;
+    top: 400px;
+    right: -300px;
     position: absolute;
     transform: translate(-50%, -50%);
     width: 500px;
@@ -150,7 +150,11 @@ p.information{
     border: 1px solid black;
     outline: 0;
 }
-.reviewPage button{
+
+.reviewPage h2{
+    color: whitesmoke;
+}
+/* .reviewPage button{
     border: 0;
     padding: 10px 30px;
     background: rgb(50, 43, 90);
@@ -160,7 +164,7 @@ p.information{
 }
 .reviewPage button:hover{
     background-color:rgb(50, 43, 90)
-}
+} */
 
 /* Review Page END */
 
